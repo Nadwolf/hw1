@@ -1,0 +1,85 @@
+.page {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/bg/intro.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(236, 30, 121, .15);
+    z-index: 1;
+}
+
+.page-logo {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.animate {
+    animation-name: shake;
+    animation-duration: 1s;
+}
+
+.page-logo__logo {
+    width: 160px;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+
+.page-logo__title {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 40px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.page-logo__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 15px 20px;
+    color: #ec1e79;
+    border: 3px solid #ec1e79;
+    white-space: nowrap;
+    text-overflow: clip;
+    letter-spacing: 1px;
+    transition: all .5s;
+}
+
+.page-logo__link:hover {
+    background-color: #ec1e79;
+    color: white;
+}
+
+@keyframes shake {
+    from, to {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    10%, 30%, 50%, 70%, 90% {
+      transform: translate3d(-10px, 0, 0);
+    }
+  
+    20%, 40%, 60%, 80% {
+      transform: translate3d(10px, 0, 0);
+    }
+  }
